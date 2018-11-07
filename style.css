@@ -1,0 +1,83 @@
+html {
+  font-size: 10px;
+  /* background: url(https://media1.tenor.com/images/97948ca733915eb236871a1b422e3a2b/tenor.gif?itemid=3535566) bottom center; */
+  /* background-size: auto; */
+  background-color: black;
+  display: grid;
+  grid-template-rows: 3;
+  grid-template-columns: 11;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys .keys-mid {
+  /* float: left; */
+  /* display: grid; */
+  /* grid-column: 2; */
+  /* grid-row: 2; */
+  /* min-height: 100vh; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.keys .keys-top{
+  /* float: left; */
+  /* display: grid; */
+  /* grid-column: 1; */
+  grid-row: 1;
+  grid-column: 3 5;
+  /* margin-top: -300px;
+  margin-left: 300px;
+  min-height: 100vh; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.keys .keys-bottom{
+  /* display: grid;
+  /* grid-column: 3; */
+  /* grid-row: 3;
+  float: left;
+  background-color: green; */
+  /* margin-top: 300px;
+  margin-left: -1300px;
+  min-height: 100vh; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(255,255,255,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: orange;
+}

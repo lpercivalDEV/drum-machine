@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="keys">
+
+      <div class="keys-top">
+          <!-- top row keys - qwerty -->
+          <div data-key="81" class="key q">
+            <kbd>Q</kbd>
+            <span class="sound">buoy high</span>
+          </div>
+          <div data-key="87" class="key w">
+            <kbd>W</kbd>
+            <span class="sound">buoy low</span>
+          </div>
+          <div data-key="69" class="key e">
+            <kbd>E</kbd>
+            <span class="sound">sync sweep</span>
+          </div>
+          <div data-key="82" class="key r">
+            <kbd>R</kbd>
+            <span class="sound">rez dive</span>
+          </div>
+          <div data-key="84" class="key t">
+            <kbd>T</kbd>
+            <span class="sound">rez screech</span>
+          </div>
+          <div data-key="89" class="key y">
+            <kbd>Y</kbd>
+            <span class="sound">rez sweep</span>
+          </div>
+          <div data-key="85" class="key u">
+            <kbd>U</kbd>
+            <span class="sound">sync bass 1</span>
+          </div>
+          <div data-key="73" class="key i">
+            <kbd>I</kbd>
+            <span class="sound">sync bass 2</span>
+          </div>
+          <div data-key="79" class="key o">
+            <kbd>O</kbd>
+            <span class="sound">sync sweep 1</span>
+        </div>
+        <div data-key="80" class="key p">
+          <kbd>P</kbd>
+          <span class="sound">sync sweep 2</span>
+      </div>
+      </div>
+
+    <div class="keys-mid">
+      <!-- center row - home keys -->
+    <div data-key="65" class="key a">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key s">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key d">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key f">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key g">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key h">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key j">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key k">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key l">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+  </div>
+</div>
+
+  <div class="keys-bottom">
+      <!-- bottom row keys - zxcv -->
+      <div data-key="90" class="key z">
+        <kbd>Z</kbd>
+        <span class="sound">house beats</span>
+      </div>
+      <div data-key="88" class="key x">
+        <kbd>X</kbd>
+        <span class="sound">house loop</span>
+      </div>
+      <div data-key="67" class="key c">
+        <kbd>C</kbd>
+        <span class="sound">filler</span>
+      </div>
+      <div data-key="86" class="key v">
+        <kbd>V</kbd>
+        <span class="sound">stomp drums</span>
+      </div>
+      <div data-key="66" class="key b">
+        <kbd>B</kbd>
+        <span class="sound">trappin in da 80's</span>
+      </div>
+      <div data-key="78" class="key n">
+        <kbd>N</kbd>
+        <span class="sound">trap beat</span>
+      </div>
+      <div data-key="77" class="key m">
+        <kbd>M</kbd>
+        <span class="sound">kendrick drum</span>
+      </div>
+      <!-- END OF KEY SECTIONS -->
+  </div>
+  </div>
+
+  <!-- ** FIGURE OUT HOW TO HAVE JS TRIGGER 'LOOP' ATTRIBUTE ON KEYPRESS ** -->
+  <!-- audio for top keys -->
+  <!-- all audio for top keys are Rhodes Polaris samples and can be found here: http://machines.hyperreal.org/manufacturers/Rhodes/Chroma-Polaris/ -->
+  <audio data-key="81" src="sounds/polaris/buoy-high.wav"></audio>
+  <audio data-key="87" src="sounds/polaris/buoy-low.wav"></audio>
+  <audio data-key="69" src="sounds/polaris/pwmsyncsweep.wav"></audio>
+  <audio data-key="82" src="sounds/polaris/rezdive.wav"></audio>
+  <audio data-key="84" src="sounds/polaris/rez-screech.wav"></audio>
+  <audio data-key="89" src="sounds/polaris/rez-sweep.wav"></audio>
+  <audio data-key="85" src="sounds/polaris/syncbass.wav"></audio>
+  <audio data-key="73" src="sounds/polaris/syncbass2.wav"></audio>
+  <audio data-key="79" src="sounds/polaris/syncsweep1.wav"></audio>
+  <audio data-key="80" src="sounds/polaris/syncsweep2.wav"></audio>
+
+
+
+  <!-- audio for middle keys are samples from the tutorial, only two were replaced due to missing samples -->
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/are-u-that-somebody_baby.mp3"></audio>
+
+  <!-- audio for bottom keys - loops -->
+  <!-- credit: mitchellfingers - house-beats; https://www.looperman.com/loops/detail/1223/house-beats-by-mitchellfingers-free-130bpm-house-drum-loop -->
+  <audio data-key="90" src="sounds/loops/house-beats.wav"></audio>
+
+  <!-- credit: Sandrique - house-loop; https://www.looperman.com/loops/detail/591/house-loop-by-sandrique-free-130bpm-house-drum-loop -->
+  <audio data-key="88" src="sounds/loops/house-loop.wav"></audio>
+
+  <!-- credit: highz - filler; https://www.looperman.com/loops/detail/21680/filler-by-highz-free-130bpm-deep-house-drum-loop  -->
+  <audio data-key="67" src="sounds/loops/filler.wav"></audio>
+
+  <!-- credit: gman15 - stomp-drums; https://www.looperman.com/loops/detail/65696/stomp-drums-by-gman15-free-130bpm-rap-drum-loop -->
+  <audio data-key="86" src="sounds/loops/stomp-drums.wav"></audio>
+
+  <!-- credit: kiestyleproductions - trappin-in-the-80s; https://www.looperman.com/loops/detail/127924/trappin-in-the-80s-by-kiestyleproductions-free-131bpm-trap-synth-loop -->
+  <audio data-key="66" src="sounds/loops/trappin-in-the-80s.wav"></audio>
+
+  <!-- credit: noizecollector - 007-trapbeat-drumloop-130bpm; https://www.looperman.com/loops/detail/59220/007-trapbeat-drumloop-130bpm-by-ygproductions-free-130bpm-rap-drum-loop  -->
+  <audio data-key="78" src="sounds/loops/trapbeat.wav"></audio>
+
+  <!-- credit: jakattak033 - kendrick-lamar-style-drum.wav; https://www.looperman.com/loops/detail/127928/kendrick-lamar-style-drum-by-jakattak033-free-130bpm-hip-hop-drum-loop  -->
+  <audio data-key="77" src="sounds/loops/kendrick-lamar-style-drum.wav"></audio>
+
+
+
+
+
+
+
+
+<script src="lp-code.js"></script>
+</body>
+</html>
